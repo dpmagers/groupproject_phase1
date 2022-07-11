@@ -1,9 +1,13 @@
 body {
-    background-color: gray;
+    background-color: hotpink;
 }
 h1{
     color: aqua;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center
+}
+h2{
+    text-align: center;
 }
 
 /* div.meme-container {
@@ -18,8 +22,10 @@ h1{
     border: 3px solid red;  
     }   */
     img {  
-    max-width: 100%;  
-    height: auto;  
+    max-width: 50%;  
+    height: auto; 
+    margin-left: 175px; 
+    
     } 
 
 /* height: 200px;
