@@ -60,10 +60,10 @@ fetch('https://api.imgflip.com/get_memes')
               resObj.data.memes[94],
               resObj.data.memes[96],
               resObj.data.memes[97],
-              resObj.data.memes[99],
-
-              
+              resObj.data.memes[99]
               ]
+            
+        
  //             displayMemes(memeObj)
  //             console.log(resObj.data.memes)
             displayMemes(memeArray)
@@ -74,17 +74,25 @@ fetch('https://api.imgflip.com/get_memes')
         
 function displayMemes(memeArray) {
     memeArray.forEach((memeObj)=>{
-        
-    
     const memeContainer = document.querySelector(".meme-container")
     const nameElement = document.createElement('h2')
     nameElement.textContent = memeObj.name
     const imageElement = document.createElement('img')
     imageElement.src = memeObj.url
     memeContainer.append(nameElement, imageElement)
+      
     
-    
+        imageElement.addEventListener('click',(e)=>{
+            console.log(`meme URL: ${memeObj.url}`)
+           // const memeWorkingTitle = 
+        })
     })}
+
+
+
+
+
+
 
     //const memeArray = resObj.data.memes
 
