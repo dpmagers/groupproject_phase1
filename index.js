@@ -81,10 +81,13 @@ function displayMemes(memeArray) {
     imageElement.src = memeObj.url
     memeContainer.append(nameElement, imageElement)
       
-    
+    // click listener for meme display
         imageElement.addEventListener('click',(e)=>{
             console.log(`meme URL: ${memeObj.url}`)
-           // const memeWorkingTitle = 
+            const memeTitle = document.querySelector("div#meme-tank h3") 
+            memeTitle.innerHTML = memeObj.name 
+            const memeImg =  document.querySelector("div#meme-tank img")
+            memeImg.src = memeObj.url
         })
     })}
 
