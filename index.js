@@ -3,25 +3,32 @@
 // return 
 
 //?_limit=20&_page=3
-
-let memeArray = []
 fetch('https://api.imgflip.com/get_memes')
     .then(res => res.json())
     .then(resObj => {
-        resObj.data.memes.forEach((memeObj) => {
-            displayMemes(memeObj)
-            console.log(resObj.data.memes)
+ //       resObj.data.memes.forEach((memeObj) => {
+              const memeArray = [resObj.data.memes[7],
+              resObj.data.memes[8],
+              resObj.data.memes[10],
+              resObj.data.memes[11],
+              
+              ]
+ //             displayMemes(memeObj)
+ //             console.log(resObj.data.memes)
+            displayMemes(memeArray)
+            console.log(memeArray)
         }) 
         
-    } )   
+ //   } )   
         
-function displayMemes(memeObj) {
+function displayMemes(memeArray) {
     const memeContainer = document.querySelector(".meme-container")
     const nameElement = document.createElement('h2')
-    nameElement.textContent = memeObj.name
+    nameElement.textContent = memeArray.name
     const imageElement = document.createElement('img')
-    imageElement.src = memeObj.url
+    imageElement.src = memeArray.url
     memeContainer.append(nameElement, imageElement)
+    
     
 }
 
