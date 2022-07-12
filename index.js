@@ -82,8 +82,7 @@ function displayMemes(memeArray) {
     memeContainer.append(nameElement, imageElement)
       
     // click listener for meme display
-        imageElement.addEventListener('click',(e)=>{
-            console.log(`meme URL: ${memeObj.url}`)
+        imageElement.addEventListener('click',()=>{
             const memeTitle = document.querySelector("div#meme-tank h3") 
             memeTitle.innerHTML = memeObj.name 
             const memeImg =  document.querySelector("div#meme-tank img")
@@ -91,11 +90,25 @@ function displayMemes(memeArray) {
         })
     })}
 
+//form 
+const form  = document.getElementById('meme-generator')
+form.addEventListener('submit',(e)=>{
+     e.preventDefault()
+     const topOutput = document.querySelector('#top-text-output')
+     const bottomOutput = document.querySelector('#bottom-text-output')
+     console.log(bottomOutput)
+     const topText = e.target['top-text'].value
+     const bottomText = e.target['bottom-text'].value
+     console.log(bottomText,topText)
+     topOutput.textContent = topText
+     bottomOutput.textContent = bottomText
 
+})
 
-
-
-
+const btn = document.getElementById('btn') 
+btn.addEventListener("click",(e)=>{
+    console.log('submitted')
+})   
 
     //const memeArray = resObj.data.memes
 
