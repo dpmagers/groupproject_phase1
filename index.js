@@ -6,9 +6,9 @@
 fetch('https://api.imgflip.com/get_memes')
     .then(res => res.json())
     .then(resObj => {
- //       resObj.data.memes.forEach((memeObj) => {
+
               const memeArray = [
-              resObj.data.memes[7],
+              resObj.data.memes[6],
               resObj.data.memes[8],
               resObj.data.memes[10],
               resObj.data.memes[11],
