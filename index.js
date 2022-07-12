@@ -10,6 +10,7 @@ fetch('https://api.imgflip.com/get_memes')
     .then(resObj => {
         resObj.data.memes.forEach((memeObj) => {
             displayMemes(memeObj)
+            console.log(resObj.data.memes)
         }) 
         
     } )   
