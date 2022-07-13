@@ -63,3 +63,30 @@ img {
   .dropdown a:hover {background-color: #ddd;}
   
   .show {display: block;}
+
+  /* From here to _ is overlay */
+
+  div#meme-tank {
+    position: relative;
+
+  }
+
+#top-text-output{
+background-color: white;
+position: absolute;
+font-size: 28pt;
+top: 2px;
+left: 120px;
+inline-size: min-content ;
+overflow: wrap;
+
+  }
+#bottom-text-output {
+background-color: white;
+position: absolute;
+font-size: 28pt;
+bottom: 60px;
+left: 120px;
+inline-size: min-content;
+overflow: wrap;
+}

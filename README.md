@@ -14,11 +14,18 @@ Completed:
 - Display Meme Img and Title onto DOM
 - Form for User Input / submit button
 - Click Event for Memes to render in the Create Meme Space
-
-Wednesday Goals: 
-
 - Finish Create Meme Event Listener
-- Array issues?
+
 - Delete Button for created Memes
 - Dropdown Menu toggle
+
+Final Goals: 
+
+- Overlay Meme Content
+- Move text output to top/bottom
+- Change meme container display format
+- Change created meme div display format
+
+- Make keydown event listeners for moving the text boxes?
 - *CSS based event listener*
+- Array issues?
