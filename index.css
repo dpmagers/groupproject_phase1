@@ -2,14 +2,16 @@ body {
     background-color: hotpink;
     color: aqua;
     -webkit-text-stroke: 1px rgba(0, 60, 139, 0.753);
-    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+    font-family: Impact, fantasy;
 }
 h1{
     color: aqua;
     font-family: New Century Schoolbook, TeX Gyre Schola, serif;
     text-align: center
 }
-
+p{
+    color:black
+  }
 div#meme-tank{
     text-align: center;
 }
@@ -86,9 +88,9 @@ img {
 #top-text-output{
 background-color: white;
 position: absolute;
-font-size: 28pt;
-top: 2px;
-left: 120px;
+font-size: 20pt;
+top: 14px;
+left: 46%;
 inline-size: min-content ;
 overflow: wrap;
 
@@ -96,9 +98,9 @@ overflow: wrap;
 #bottom-text-output {
 background-color: white;
 position: absolute;
-font-size: 28pt;
-bottom: 60px;
-left: 120px;
+font-size: 14pt;
+bottom: -1%;
+left: 46%;
 inline-size: min-content;
 overflow: wrap;
 }
