@@ -1,4 +1,5 @@
 
+//FETCH REQUEST FOR MEMES
 fetch('https://api.imgflip.com/get_memes')
     .then(res => res.json())
     .then(resObj => {
@@ -65,7 +66,7 @@ fetch('https://api.imgflip.com/get_memes')
             // console.log(resObj.data.memes)
         }) 
         
- //   } )   
+ //  RENDERING THE DISPLAY OF MEMES 
  const memeTitle = document.querySelector("div#meme-tank h3")      
  const memeImg =  document.querySelector("div#meme-tank img")
 
@@ -86,7 +87,7 @@ function displayMemes(memeArray) {
         })
     })}
 
-//form 
+//FORM PUTS THE TEXT ON THE MEME
 const form  = document.getElementById('meme-generator')
 form.addEventListener('submit',(e)=>{
      e.preventDefault()
@@ -100,43 +101,40 @@ form.addEventListener('submit',(e)=>{
      bottomOutput.textContent = bottomText
 
 })
-
+//BUTTON THAT PUTS FINISHED IN THE CONTAINER 
 const btn = document.getElementById('btn') 
 btn.addEventListener("click",(e)=>{
     console.log('submitted')
     const topOutput = document.getElementById('top-text-output')
     const bottomOutput = document.getElementById('bottom-text-output')
-    
+    console.log(topOutput.textContent)
+    console.log(bottomOutput.innerHTML)
+
     
     const newMemeArray = []
-    newMemeArray[0] = memeTitle
-    newMemeArray[1] = memeImg
-    newMemeArray[2] = topOutput
-    newMemeArray[3] = bottomOutput
+    newMemeArray[0] = memeTitle.innerHTML
+    newMemeArray[1] = memeImg.src
+    newMemeArray[2] = topOutput.textContent
+    newMemeArray[3] = bottomOutput.innerHTML
 
     const newMemeContainer = document.getElementById('created-and-favorited-memes')
     const newMemeDiv = document.createElement('div')
     
-    
     const newMemeTitle = document.createElement('h2')
-    newMemeTitle.innerHTML = memeTitle
+    newMemeTitle.innerHTML = newMemeArray[0]
 
-    // const newMemeImg = document.createElement('img')
-    // newMemeImg.src = memeImg
+    const newMemeImg = document.createElement('img')
+    newMemeImg.src = newMemeArray[1]
 
-    // const newMemeTopOutput = document.createElement('p').setAttribute("id", "new-meme-top-output")
-    // newMemeTopOutput.textContent = topOutput
+    const newMemeTopOutput = document.createElement('p')
+    newMemeTopOutput.textContent = newMemeArray[2]
 
     // const newMemeBottomOutput = document.createElement('p').setAttribute("id", "new-meme-bottom-output")
-    // newMemeBottomOutput.textContent = bottomOutput
+    // newMemeBottomOutput.innerHTML = newMemeArray[3]
 
     newMemeContainer.append(newMemeDiv)
-    newMemeDiv.append(newMemeTitle)
-
-
-    
-    
-    
+    newMemeDiv.append(newMemeTitle, newMemeImg, newMemeTopOutput)
+ 
 })   
 
    
