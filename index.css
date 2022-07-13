@@ -6,35 +6,22 @@ h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center
 }
-/* h2{ 
-    text-align: center;
-} */
+
 
 div.meme-container {
-    /* height: 200px;
-    width: 300px; */
+   
     text-align: center;
     margin-left: auto; 
     margin-right: auto;
     max-width: 50%;
 }
 
-/* div {  
-    width: auto;  
-    text-align: center;  
-    padding: 15px;  
-    border: 3px solid red;  
-    }   */
-    img {  
+
+img {  
     max-width: 50%;  
     height: auto; 
     margin: auto
-    
-    } 
-
-/* height: 200px;
-width: 50%;
-background-color: powderblue; */
+} 
 
 
 /* everything until ln 78 is dropdown */

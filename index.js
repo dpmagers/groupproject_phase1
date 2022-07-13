@@ -62,7 +62,7 @@ fetch('https://api.imgflip.com/get_memes')
             
         
             displayMemes(memeArray)
-            // console.log(resObj.data.memes)
+            
         }) 
         
  //  RENDERING THE DISPLAY OF MEMES 
@@ -78,67 +78,83 @@ function displayMemes(memeArray) {
     imageElement.src = memeObj.url
     memeContainer.append(nameElement, imageElement)
       
-    // click listener for meme display
+
+// drop down meme population
+        const dropdownItem = document.getElementById('myDropdown')
+        const newItem = document.createElement('a')
+            newItem.textContent = memeObj.name
+            dropdownItem.append(newItem)
+
+        newItem.addEventListener('click', (e) => {
+            memeTitle.textContent = memeObj.name
+            memeImg.src = memeObj.url
+        })
+
+// click listener for meme display
         imageElement.addEventListener('click',()=>{
             
             memeTitle.innerHTML = memeObj.name 
             memeImg.src = memeObj.url
+
+    
         })
     })}
 
 //FORM PUTS THE TEXT ON THE MEME
-const form  = document.getElementById('meme-generator')
-form.addEventListener('submit',(e)=>{
-     e.preventDefault()
-     const topOutput = document.querySelector('#top-text-output')
-     const bottomOutput = document.querySelector('#bottom-text-output')
-     const topText = e.target['top-text'].value
-     const bottomText = e.target['bottom-text'].value
-     topOutput.textContent = topText
-     bottomOutput.textContent = bottomText
+    const form  = document.getElementById('meme-generator')
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault()
+        const topOutput = document.querySelector('#top-text-output')
+        const bottomOutput = document.querySelector('#bottom-text-output')
+        const topText = e.target['top-text'].value
+        const bottomText = e.target['bottom-text'].value
+            topOutput.textContent = topText
+            bottomOutput.textContent = bottomText
+        
+     form.reset()
+     
 
 })
 
-let j = 0
+    let j = 0
 //BUTTON THAT PUTS FINISHED IN THE CONTAINER 
-const btn = document.getElementById('btn') 
-btn.addEventListener("click",(e)=>{
-    console.log('submitted')
-    const topOutput = document.getElementById('top-text-output')
-    const bottomOutput = document.getElementById('bottom-text-output')
+    const btn = document.getElementById('btn') 
+    btn.addEventListener("click",(e)=>{
+        const topOutput = document.getElementById('top-text-output')
+        const bottomOutput = document.getElementById('bottom-text-output')
     
     
 
     
     const newMemeArray = []
-    newMemeArray[0] = memeTitle.innerHTML
-    newMemeArray[1] = memeImg.src
-    newMemeArray[2] = topOutput.textContent
-    newMemeArray[3] = bottomOutput.textContent
+        newMemeArray[0] = memeTitle.innerHTML
+        newMemeArray[1] = memeImg.src
+        newMemeArray[2] = topOutput.textContent
+        newMemeArray[3] = bottomOutput.textContent
 
     const newMemeContainer = document.getElementById('created-and-favorited-memes')
     const newMemeDiv = document.createElement('div')
-    newMemeDiv.id =`${j}`
+        newMemeDiv.id =`${j}`
     
     const newMemeTitle = document.createElement('h2')
-    newMemeTitle.innerHTML = newMemeArray[0]
+        newMemeTitle.innerHTML = newMemeArray[0]
 
     const newMemeImg = document.createElement('img')
-    newMemeImg.src = newMemeArray[1]
+        newMemeImg.src = newMemeArray[1]
 
     const newMemeTopOutput = document.createElement('p')
-    newMemeTopOutput.textContent = newMemeArray[2]
+        newMemeTopOutput.textContent = newMemeArray[2]
 
     const newMemeBottomOutput = document.createElement('p')
-    newMemeBottomOutput.textContent = newMemeArray[3]
+        newMemeBottomOutput.textContent = newMemeArray[3]
 
     const deleteBtn = document.createElement("button")
-    deleteBtn.innerHTML = "Delete"
-    deleteBtn.id = `delete ${j}`
-    deleteBtn.className = 'delete'
+        deleteBtn.innerHTML = "Delete"
+        deleteBtn.id = `delete ${j}`
+        deleteBtn.className = 'delete'
 
     newMemeContainer.append(newMemeDiv)
-    newMemeDiv.append(newMemeTitle, newMemeImg, newMemeTopOutput, newMemeBottomOutput, deleteBtn)
+        newMemeDiv.append(newMemeTitle, newMemeImg, newMemeTopOutput, newMemeBottomOutput, deleteBtn)
     
     deleteBtn.addEventListener('click',(e)=>{
         newMemeDiv.remove()
