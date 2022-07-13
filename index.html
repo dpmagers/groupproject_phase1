@@ -7,9 +7,9 @@
     <body>
         <h1>Memes For Days</h1>
         <div id = "meme-display">
-            <h2>Placeholder</h2>
+            <h2>Meme Tank</h2>
             <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                <button onclick="myFunction()" class="dropbtn">Select Meme</button>
                 <div id="myDropdown" class="dropdown-content">
                   
                 </div>
@@ -21,20 +21,20 @@ function myFunction() {
 }
 
 // Close the dropdown if the user clicks outside of it
-// window.onclick = function(event) {
-//   if (!event.target.matches('.dropbtn')) {
-//     var dropdowns = document.getElementsByClassName("dropdown-content");
-//     var i;
-//     for (i = 0; i < dropdowns.length; i++) {
-//       var openDropdown = dropdowns[i];
-//       if (openDropdown.classList.contains('show')) {
-//         openDropdown.classList.remove('show');
-//       }
-//     }
-//   }
-// }
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+ }
                 </script>
-              </div>
+            </div>
             <div id = 'meme-tank'>
                 <div>
                 <h3>Meme Title Goes Here</h3>
@@ -52,11 +52,11 @@ function myFunction() {
                 </div>
                 <div>
                     <h4>Comment section</h4>
-                   </div>
+                </div>
             </div>
             <div>
                 <div class = "meme-form" >
-                     <form id="meme-generator">
+                    <form id="meme-generator">
                         <label for="top text">Top Text</label>
                         <input type="text" id="top-text">
                         <label for="bottom text">Bottom Text</label>
@@ -64,7 +64,8 @@ function myFunction() {
                         <input type="submit" value="Submit">
                     
                     </form>
-                </div>           
+                </div>   
+                <div>       
                 <div id = "created-and-favorited-memes">
                    <h2>Created Memes</h2>
 
@@ -72,6 +73,7 @@ function myFunction() {
             </div>
 
             <div class  = "meme-container" ></div>
+            </div>
         </div>
        
     </body>

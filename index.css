@@ -1,12 +1,22 @@
 body {
     background-color: hotpink;
+    color: aqua;
+    -webkit-text-stroke: 1px rgba(0, 60, 139, 0.753);
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
 }
 h1{
     color: aqua;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
     text-align: center
 }
 
+div#meme-tank{
+    text-align: center;
+}
+
+h3{
+    color: aqua;
+}
 
 div.meme-container {
    
@@ -26,11 +36,13 @@ img {
 
 /* everything until ln 78 is dropdown */
 .dropbtn {
-    background-color: #3498DB;
+    background-color: #ffffff;
     color: white;
     padding: 16px;
     font-size: 16px;
-    border: none;
+    border-style: inset;
+    border-width: 2px;
+    border-color: #662424;
     cursor: pointer;
   }
   
