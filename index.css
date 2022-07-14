@@ -63,20 +63,17 @@ position:relative;
 .created-meme-top-text{
   position: absolute;
   top: 95%;
-  left: 31%;
+  left: 46%;
   -webkit-text-stroke: 1px black;
   color: white;
-  font-size: 20pt;
  
 }
 
 .created-meme-bottom-text{
   position: absolute;
-  left: 31%;
   bottom: -40%;
   -webkit-text-stroke: 1px black;
   color: white;
-  font-size: 20pt;
 }
 #created-and-favorited-memes h2{
   text-align: center;
