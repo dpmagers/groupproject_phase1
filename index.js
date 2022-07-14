@@ -143,9 +143,11 @@ function displayMemes(memeArray) {
         newMemeImg.src = newMemeArray[1]
 
     const newMemeTopOutput = document.createElement('p')
+            newMemeTopOutput.className = "created-meme-top-text"
         newMemeTopOutput.textContent = newMemeArray[2]
 
     const newMemeBottomOutput = document.createElement('p')
+            newMemeBottomOutput.className = "created-meme-bottom-text"
         newMemeBottomOutput.textContent = newMemeArray[3]
 
     const deleteBtn = document.createElement("button")
