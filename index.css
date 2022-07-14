@@ -68,32 +68,25 @@ height: 300;
 }
 
 .created-meme-top-text{
-<<<<<<< HEAD
   position: relative;
-  bottom: 320;
-=======
-  position: absolute;
-  top: 95%;
-  left: 46%;
->>>>>>> 23b47cb48fd2f056e4cdfff8739eb4e29a76a056
+  bottom: 340;
   -webkit-text-stroke: 1px black;
   color: white;
+  font-size: 20pt;
  
 }
 
 .created-meme-bottom-text{
-<<<<<<< HEAD
   position: relative;
-  bottom: 150;
+  bottom: 135;
   -webkit-text-stroke: 1px black;
   color: white;
-  font-size: 14pt;
-=======
-  position: absolute;
-  bottom: -40%;
-  -webkit-text-stroke: 1px black;
-  color: white;
->>>>>>> 23b47cb48fd2f056e4cdfff8739eb4e29a76a056
+  font-size: 20pt;
+}
+
+.delete{
+  position: relative;
+  bottom: 135;
 }
 #created-and-favorited-memes{
   text-align: center;

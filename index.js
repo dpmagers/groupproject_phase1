@@ -88,6 +88,8 @@ function displayMemes(memeArray) {
         newItem.addEventListener('click', (e) => {
             memeTitle.textContent = memeObj.name
             memeImg.src = memeObj.url
+            topOutput.textContent = ""
+            bottomOutput.textContent = ""
         })
 
 // click listener for meme display
@@ -95,17 +97,17 @@ function displayMemes(memeArray) {
             
             memeTitle.innerHTML = memeObj.name 
             memeImg.src = memeObj.url
-
+            topOutput.textContent = ""
+            bottomOutput.textContent = ""
     
         })
     })}
-
+const topOutput = document.querySelector('#top-text-output')
+const bottomOutput = document.querySelector('#bottom-text-output')
 //FORM PUTS THE TEXT ON THE MEME
     const form  = document.getElementById('meme-generator')
     form.addEventListener('submit',(e)=>{
         e.preventDefault()
-        const topOutput = document.querySelector('#top-text-output')
-        const bottomOutput = document.querySelector('#bottom-text-output')
         const topText = e.target['top-text'].value
         const bottomText = e.target['bottom-text'].value
             topOutput.textContent = topText
