@@ -124,7 +124,7 @@ const bottomOutput = document.querySelector('#bottom-text-output')
     btn.addEventListener("click",(e)=>{
         const topOutput = document.getElementById('top-text-output')
         const bottomOutput = document.getElementById('bottom-text-output')
-    
+           
     
 
     

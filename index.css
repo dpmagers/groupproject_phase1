@@ -73,15 +73,19 @@ height: 300;
   -webkit-text-stroke: 1px black;
   color: white;
   font-size: 20pt;
- 
+   width: 300px;
+   padding-left: 550px;
 }
 
 .created-meme-bottom-text{
+
   position: relative;
   bottom: 135;
   -webkit-text-stroke: 1px black;
   color: white;
   font-size: 20pt;
+  width: 300px;
+  padding-left: 550px;
 }
 
 .delete{
