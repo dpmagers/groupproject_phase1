@@ -1,5 +1,5 @@
 body {
-    background-color: hotpink;
+    background-color: darksalmon;
     color: aqua;
     -webkit-text-stroke: 1px rgba(0, 60, 139, 0.753);
     font-family: Impact, fantasy;
@@ -16,7 +16,6 @@ p{
 div#meme-tank{
     text-align: center;
 }
-
 h3{
     color: aqua;
 }
@@ -28,19 +27,21 @@ div.meme-container {
     margin-right: auto;
     max-width: 50%;
 }
-#img img{
-  width: auto;
-  height: auto;
-  max-width: 30%;
-  max-height: 40%;
+#image img{
+  width: 300;
+  height: 300;
+  max-width: 300;
+  max-height: 300;
 }
 
-/* img {  
+ img {  
     max-width: 50%;  
     height: auto; 
     margin: auto;
-}  */
-
+}  
+form#meme-generator{
+  text-align: center;
+}
 img{
   display: inline-block;
   text-align: center;
@@ -57,13 +58,18 @@ img{
 #created-and-favorited-memes img {
 display: block;
 position:relative;
+margin-left: auto;
+margin-right: auto;
+max-height: 300;
+max-width: 300;
+width: 300;
+height: 300;
 
 }
 
 .created-meme-top-text{
-  position: absolute;
-  top: 95%;
-  left: 31%;
+  position: relative;
+  bottom: 320;
   -webkit-text-stroke: 1px black;
   color: white;
   font-size: 20pt;
@@ -71,14 +77,13 @@ position:relative;
 }
 
 .created-meme-bottom-text{
-  position: absolute;
-  left: 31%;
-  bottom: -40%;
+  position: relative;
+  bottom: 150;
   -webkit-text-stroke: 1px black;
   color: white;
-  font-size: 20pt;
+  font-size: 14pt;
 }
-#created-and-favorited-memes h2{
+#created-and-favorited-memes{
   text-align: center;
 }
 
@@ -106,7 +111,7 @@ position:relative;
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #b4b4b4;
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -151,4 +156,8 @@ bottom: 4%;
 left: 43%;
 inline-size: min-content;
 overflow: wrap;
+}
+
+#image{
+  text-align: center;
 }
